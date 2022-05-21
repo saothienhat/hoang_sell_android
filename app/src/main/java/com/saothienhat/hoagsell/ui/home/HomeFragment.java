@@ -25,6 +25,9 @@ public class HomeFragment extends Fragment {
 
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView sloganTextView = binding.sloganTextViewId;
+        homeViewModel.getSloganText().observe(getViewLifecycleOwner(), sloganTextView::setText);
+
         return root;
     }
 
